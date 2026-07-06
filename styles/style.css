@@ -1,18 +1,17 @@
 /* место для вашего кода */
 .header {
   display: grid;
-  width: 1100px;
+  max-width: 1100px;
   height: 293px;
-  background-color: aqua;
+  background-color: white;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   font-size: 18px;
+  padding: 0;
 }
 
 .nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  grid-column: span 1;
   margin-left: 50px;
 }
 
@@ -31,18 +30,15 @@
 }
 
 .header-logo {
-  display: block;
-  height: 105px;
   width: 148px;
+  grid-column: span 2;
 }
 
 .address {
-  display: flex;
-  justify-self: flex-end;
-  flex-wrap: wrap;
+  grid-column: 3;
   margin-right: 50px;
-  width: 240px;
-  height: 98px;
+  max-width: 240px;
+  justify-self: end;
 }
 
 .address li {
@@ -56,64 +52,83 @@
 }
 
 .cover {
-  display: grid;
-  width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 1100px;
   height: 757px;
+  background-color: rgba(0, 0, 0, 0.5);
   background-image: url("../images/cover.jpg");
-  background-color: rgb(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* .overlay {
+.cover_h1 {
   display: flex;
-  width: 1100px;
-  height: 757px;
-  background-color: black;
-  opacity: 50%;
-  z-index: 2;
-} */
-
-.OHO,
-.TEBE,
-.HADO {
-  color: #ffffff;
-}
-
-.OHO {
-  grid-area: OHO;
-  width: 286px;
-  height: 115px;
-}
-.TEBE {
-  grid-area: TEBE;
-  width: 339px;
-  height: 115px;
-  align-self: center;
-}
-.HADO {
-  grid-area: HADO;
-  width: 387px;
-  height: 115px;
-  align-self: flex-end;
-  justify-self: end;
-}
-
-.section_text {
-  display: grid;
-  z-index: 1;
-  margin: 165px 50px 207px 50px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 1000px;
-  height: 385px;
-  font-weight: bold;
-  font-size: 100px;
+  flex-direction: column;
+  color: white;
   text-transform: uppercase;
   letter-spacing: 30%;
-  grid-template-areas:
-    "OHO . . "
-    ". TEBE ."
-    ". HADO HADO";
+  font-weight: bold;
+  font-size: 100px;
+  margin-top: 165px;
+  gap: 18px;
+}
+
+.cover_span {
+  display: block;
+}
+.span_center {
+  text-align: center;
+}
+.span_end {
+  text-align: right;
+}
+.span_no_letter-spacing {
+  letter-spacing: 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description_text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 0;
+  font-size: 22px;
+  word-spacing: 18px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.description_button {
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-width: 1px;
+  width: 256px;
+  height: 51px;
+  background-color: transparent;
+  border-color: white;
+}
+
+.footer {
+  width: 1100px;
+  height: 180px;
+  background-color: blue;
 }
