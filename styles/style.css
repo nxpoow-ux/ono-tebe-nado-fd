@@ -275,19 +275,19 @@
 }
 
 .about_header_text {
-  display: flex;
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
+  display: flex;
   color: black;
   padding-top: 25px;
   padding-bottom: 75px;
 }
 
 .about_p_text {
+  font-size: 20px;
   display: flex;
   flex-wrap: wrap;
-  font-size: 20px;
   color: black;
 }
 
