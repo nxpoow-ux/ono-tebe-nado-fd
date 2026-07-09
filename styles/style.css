@@ -2,12 +2,12 @@
 .header {
   display: grid;
   max-width: 1100px;
-  min-height: 293px;
   background-color: white;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   font-size: 18px;
-  padding: 0;
+  /* Настроил высоту с помощью отступов */
+  padding: 85px 0 90px 0;
 }
 
 .nav {
@@ -25,8 +25,13 @@
   list-style-type: none;
 }
 
-.a_header {
+.a_line_offset {
   text-underline-offset: 4px;
+}
+
+.a_underline_off {
+  /*Исправление 1ой ошибки (2ой класс для "главная" */
+  text-decoration: none;
 }
 
 .header_logo {
@@ -59,17 +64,19 @@
   padding-left: 50px;
   padding-right: 50px;
   max-width: 1100px;
-  height: 757px;
+  /* Добавил min-height */
+  min-height: 757px;
   background-image: url("../images/cover.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  z-index: -1;
+  /* Заменил значение "-1" на "0" */
+  z-index: 0;
 }
 
 .overlay {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
@@ -77,7 +84,8 @@
   height: 100%;
 }
 
-.cover_h1 {
+.cover_header_text {
+  /* Исправил название, чтобы в них не было чисел */
   display: flex;
   flex-direction: column;
   color: white;
@@ -162,6 +170,12 @@
   min-height: 596px;
   padding-left: 40px;
   padding-right: 40px;
+  /* Внес в один класс повторяющиеся параметры карточек */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  position: relative;
 }
 
 .article {
@@ -193,29 +207,14 @@
 
 .li_film_background {
   background-image: url("../images/card-lot-01.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-  position: relative;
 }
 
 .li_books_background {
   background-image: url("../images/card-lot-02.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-  position: relative;
 }
 
 .li_picture_background {
   background-image: url("../images/card-lot-03.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-  position: relative;
 }
 
 .ul_lots {
@@ -223,18 +222,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 25px;
-}
-.lots_container {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.lots_footer {
+/* Исправил название, чтобы не было ассоциации с footer */
+.a_lots_more {
   display: block;
-  padding-left: 40px;
-  padding-top: 30px;
+  /* Добавил fit-content  */
+  max-width: fit-content;
+  /* Заменил padding на margin */
+  margin-left: 40px;
+  margin-top: 30px;
   font-size: 20px;
   text-decoration: underline;
   color: black;
@@ -246,7 +245,7 @@
   margin-left: 24px;
   margin-right: 24px;
   margin-top: 120px;
-  min-height: 595px;
+  /* Удалил установку высоты */
   gap: 25px;
 }
 
@@ -295,7 +294,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1100px;
-  min-height: 180px;
+  /* Удалил установку высоты */
   background-color: white;
   margin-top: 180px;
 }
