@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
+
   <body>
     <header class="header">
       <nav class="nav">
         <ul class="ul">
           <li>
-            <!-- Добавил href и классы -->
             <a class="a_line_offset a_underline_off" href="#0">главная</a>
           </li>
           <li>
@@ -48,7 +48,6 @@
       <section class="cover">
         <div class="overlay"></div>
         <h1 class="cover_header_text">
-          <!-- Исправил название, чтобы в них не было чисел -->
           <span class="cover_span">оно</span>
           <span class="cover_span span_center"
             >теб<span class="span_no_letter_spacing">е</span></span
@@ -58,7 +57,6 @@
           >
         </h1>
         <div class="description">
-          <!-- Сменил элемент с h2 на p -->
           <p class="description_text">
             Аукцион вещей, в которые никто не верил
           </p>
@@ -66,56 +64,63 @@
         </div>
       </section>
       <section class="lots">
-        <!-- Исправил капс в тэгах -->
         <h2 class="header_lots">Лоты</h2>
-        <!-- Удалил лишний контейнер <div> -->
-          <ul class="ul_lots">
-            <!-- Изменил структуру на предложенную ревьювером -->
-            <li class="li_lots li_film_background">
-                  <a class="a_underline_off" href="#0">
-                    <article class="article">
-                      <!-- Поменял нумерацию заголовка с h3 на h2 -->
-                      <h2 class="article_header">Фильм режиссёра, который бросил киношколу</h2>
-                      <p class="article_text" >Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
+        <ul class="ul_lots">
+          <li class="li_lots li_film_background">
+            <a class="a_underline_off" href="#0">
+              <article class="article">
+                <h3 class="article_header">
+                  Фильм режиссёра, который бросил киношколу
+                </h3>
+                <p class="article_text">
+                  Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
                   ставка, если бы вы не знали, что режиссёр — Пол Томас
-                  Андерсон?</p>
-                      <div class="overlay"></div>
-                    </article>
-                  </a>
-                </li>
-                <li class="li_lots li_books_background">
-                  <a class="a_underline_off" href="#0">
-                    <article class="article">
-                      <h2 class="article_header"> Книга, где описан один скучный день из жизни рекламного
-                  агента</h2>
-                      <p class="article_text">Объёмом почти в тысячу страниц. Иногда без знаков препинания и
+                  Андерсон?
+                </p>
+                <div class="overlay"></div>
+              </article>
+            </a>
+          </li>
+          <li class="li_lots li_books_background">
+            <a class="a_underline_off" href="#0">
+              <article class="article">
+                <h3 class="article_header">
+                  Книга, где описан один скучный день из жизни рекламного агента
+                </h3>
+                <p class="article_text">
+                  Объёмом почти в тысячу страниц. Иногда без знаков препинания и
                   с переходами на древнеанглийский. В ней одновременно
                   рассказывается о 16 июня 1904 года и об истории литературы,
                   начиная с античных времён. И это всё накладывается на
                   эпическую поэму Гомера. Сколько бы вы поставили на «Улисса»
-                  Джеймса Джойса?</p>
-                      <div class="overlay"></div>
-                    </article>
-                  </a>
-                </li>
-                <li class="li_lots li_picture_background">
-                  <a class="a_underline_off" href="#0">
-                    <article class="article">
-                      <h2 class="article_header">Картина, которую повторит даже 5-летний сын маминой
-                  подруги</h2>
-                      <p class="article_text">Ну действительно, там линия, тут кружочек, а здесь и вовсе
+                  Джеймса Джойса?
+                </p>
+                <div class="overlay"></div>
+              </article>
+            </a>
+          </li>
+          <li class="li_lots li_picture_background">
+            <a class="a_underline_off" href="#0">
+              <article class="article">
+                <h3 class="article_header">
+                  Картина, которую повторит даже 5-летний сын маминой подруги
+                </h3>
+                <p class="article_text">
+                  Ну действительно, там линия, тут кружочек, а здесь и вовсе
                   что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
                   котиков... Сколько бы вы на такое поставили, если бы не знали,
-                  что это — одна из революционных работ Кандинского?</p>
-                      <div class="overlay"></div>
-                    </article>
-                  </a>
-                </li>
-              </ul>      
-          <a href="#0" class="a_lots_more">посмотреть больше</a>
-        </div>
+                  что это — одна из революционных работ Кандинского?
+                </p>
+                <div class="overlay"></div>
+              </article>
+            </a>
+          </li>
+        </ul>
+        <!-- Исправил неединообразное форматирование кода через webformatter  -->
+        <!-- Почему-то сломался Prettier, возможно из-за комментов (: ) -->
+        <a href="#0" class="a_lots_more">посмотреть больше</a>
+        <!-- Удалил лишний /div -->
       </section>
-
       <section class="about">
         <div class="logo_container">
           <img
@@ -124,9 +129,7 @@
             alt="Лого Оно тебе надо"
           />
         </div>
-        <!-- Сменил div на article -->
         <article class="about_text_div">
-          <!-- Исправил капс в тэгах -->
           <h2 class="about_header_text">Об аукционе</h2>
           <p class="about_p_text">
             Здесь вы не встретите очередное пафосное собрание невероятно
@@ -161,8 +164,6 @@
       <div class="footer_nav">
         <ul>
           <li>
-            <!-- Добавил href и классы -->
-            <!-- Изменил название класса, чтобы не было связи с Хеддером -->
             <a class="a_line_offset a_underline_off" href="#0">главная</a>
           </li>
           <li>
